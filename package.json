@@ -1,13 +1,23 @@
 {
   "name": "gh",
-  "private": true,
+  "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyper-code-harness/gh"
+  },
   "procs": {
     "src": "src",
     "label": "GitHub",
     "icon": "ph-github-logo",
     "optional": true,
     "description": "Browse and search repositories, issues, pull requests, and reviews, with guarded write operations.",
-    "domains": ["github.com", "api.github.com"]
+    "domains": [
+      "github.com",
+      "api.github.com"
+    ]
+  },
+  "scripts": {
+    "test": "bun ${HYPER_CODE:-../hyper-code}/script/plugin-test.ts ."
   }
 }
